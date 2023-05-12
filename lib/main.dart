@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habesh_meal/screens/category_meal_screen.dart';
 import './screens/categories_screen.dart';
 
 void main() => runApp(const MyApp());
@@ -8,9 +9,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Habesha Meal',
-      home: CategoriesScreen(),
+      home: const CategoriesScreen(),
+      routes: {CategoryMealScreen.routeName: (_) => CategoryMealScreen()},
     );
   }
 }
